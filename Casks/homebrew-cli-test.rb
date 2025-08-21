@@ -2,7 +2,7 @@
 cask "homebrew-cli-test" do
   desc ""
   homepage ""
-  version "0.0.4"
+  version "0.0.5"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,29 +12,29 @@ cask "homebrew-cli-test" do
 
   on_macos do
     on_intel do
-      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.4/homebrew-cli-test_Darwin_x86_64.tar.gz"
-      sha256 "c8a3dc94f0874d8e7201705933a336fa16dc82bdb3215915e9b813ff9d35ad88"
+      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.5/homebrew-cli-test_Darwin_x86_64.tar.gz"
+      sha256 "5ba6d14d887a6b20b7d9b439b81b390c986a98b9c7414a818ad96714f4d9b9a1"
     end
     on_arm do
-      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.4/homebrew-cli-test_Darwin_arm64.tar.gz"
-      sha256 "952dc22c3eeaf3f4629f3f2b6042be14989ad10bc39625984e27a51db9382164"
+      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.5/homebrew-cli-test_Darwin_arm64.tar.gz"
+      sha256 "d55f7bcc157dc6611f9892190f5944153e3648a2834fe75d841bee15c4285d5e"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.4/homebrew-cli-test_Linux_x86_64.tar.gz"
-      sha256 "de25ab71a5438f253ea4aa43cdb02dc3b86219f7dbe9515143e9caa9042a64b5"
+      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.5/homebrew-cli-test_Linux_x86_64.tar.gz"
+      sha256 "18f7260639a556789f8d5951b534ae5540836ef1af1e94014ac2cdf1790f4653"
     end
     on_arm do
-      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.4/homebrew-cli-test_Linux_arm64.tar.gz"
-      sha256 "801a03f81ef4415f87e18d351e37dc05a56042746025dc9c5c50a93b73aacd79"
+      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.5/homebrew-cli-test_Linux_arm64.tar.gz"
+      sha256 "49b8ec90f614d58b4d349973b42670929bb6084f21992130b3ac338c6215ffbf"
     end
   end
 
   postflight do
     if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/sliplane-cli"]
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/homebrew-cli-test"]
     end
   end
 
