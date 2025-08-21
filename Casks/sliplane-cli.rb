@@ -2,7 +2,7 @@
 cask "sliplane-cli" do
   desc ""
   homepage ""
-  version "0.0.1"
+  version "0.0.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,23 +12,23 @@ cask "sliplane-cli" do
 
   on_macos do
     on_intel do
-      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.1/homebrew-cli-test_Darwin_x86_64.tar.gz"
-      sha256 "aba65688b961721744f49b970b36d4486985a8ef7d9afffe64d597b222306d5b"
+      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.2/homebrew-cli-test_Darwin_x86_64.tar.gz"
+      sha256 "59331dc024cde8db63535c4a423e2ba0937c9db33b8565bad6821c0f848e07ce"
     end
     on_arm do
-      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.1/homebrew-cli-test_Darwin_arm64.tar.gz"
-      sha256 "6db14e3053250d8e08a5a1c87b374cd4fc2e5abda921efd933a2e59537674033"
+      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.2/homebrew-cli-test_Darwin_arm64.tar.gz"
+      sha256 "0b99ecb403f1f7ff4aa85cef83aec2c32778e80958e04d18eb98e0640caf5180"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.1/homebrew-cli-test_Linux_x86_64.tar.gz"
-      sha256 "2270d2b02b29436b511e9e715be592d512105f9d52ef62e18957fd7caa728202"
+      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.2/homebrew-cli-test_Linux_x86_64.tar.gz"
+      sha256 "04dc10493112dd5c08b2349c179f341c3423d996da9f9480f3f08d31a94827f0"
     end
     on_arm do
-      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.1/homebrew-cli-test_Linux_arm64.tar.gz"
-      sha256 "b6ec638ce4e3a1416b86c76ec999fecba865754e6ac0a972d0dbf61b0bc80d4b"
+      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.2/homebrew-cli-test_Linux_arm64.tar.gz"
+      sha256 "dacb755bbccb2631ac85cc487213d8ca941adbfb706a595f0727c07aad5e6a1c"
     end
   end
 
