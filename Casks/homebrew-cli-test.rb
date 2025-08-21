@@ -2,7 +2,7 @@
 cask "homebrew-cli-test" do
   desc ""
   homepage ""
-  version "0.0.3"
+  version "0.0.4"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,23 +12,29 @@ cask "homebrew-cli-test" do
 
   on_macos do
     on_intel do
-      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.3/homebrew-cli-test_Darwin_x86_64.tar.gz"
-      sha256 "66879b19712003807b64c8c59ccdf7d6563fecf868367da6eb2d1eba98727d14"
+      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.4/homebrew-cli-test_Darwin_x86_64.tar.gz"
+      sha256 "c8a3dc94f0874d8e7201705933a336fa16dc82bdb3215915e9b813ff9d35ad88"
     end
     on_arm do
-      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.3/homebrew-cli-test_Darwin_arm64.tar.gz"
-      sha256 "02081d23bf227babccdfab03088a8a91fb1c47883eb05a4b570af84b6d95ff52"
+      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.4/homebrew-cli-test_Darwin_arm64.tar.gz"
+      sha256 "952dc22c3eeaf3f4629f3f2b6042be14989ad10bc39625984e27a51db9382164"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.3/homebrew-cli-test_Linux_x86_64.tar.gz"
-      sha256 "8546936a0d72ef8317180f3a003f290e65eca8e21b7f01b535e2c567b017c179"
+      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.4/homebrew-cli-test_Linux_x86_64.tar.gz"
+      sha256 "de25ab71a5438f253ea4aa43cdb02dc3b86219f7dbe9515143e9caa9042a64b5"
     end
     on_arm do
-      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.3/homebrew-cli-test_Linux_arm64.tar.gz"
-      sha256 "0d06f735734edb0f67aacda880ff1d3fe41af2da6917ba48b481519b15535508"
+      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.4/homebrew-cli-test_Linux_arm64.tar.gz"
+      sha256 "801a03f81ef4415f87e18d351e37dc05a56042746025dc9c5c50a93b73aacd79"
+    end
+  end
+
+  postflight do
+    if OS.mac?
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/sliplane-cli"]
     end
   end
 
