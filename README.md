@@ -2,6 +2,15 @@
 
 ## Installation
 
+```
+brew tap lksmsr/cli-test
+brew install --cask lksmsr/cli-test/homebrew-cli-test
+```
+
+run with
+```
+homebrew-cli-test
+```
 
 
 ## Authentication
@@ -14,6 +23,14 @@ The cli expects two environment variables for authentication:
 You can retrieve both from your Sliplane team settings:
  
 https://sliplane.io/app/team/api
+
+
+## Compile
+
+Run 
+```bash
+go build -o sliplane-cli
+```
 
 
 ## Release
