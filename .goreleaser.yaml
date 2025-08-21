@@ -46,7 +46,7 @@ changelog:
       - "^test:"
 
 homebrew_casks:
-  - name: sliplane-cli
+  - name: homebrew-cli-test
     repository:
       owner: lksmsr
       name: cli-test
