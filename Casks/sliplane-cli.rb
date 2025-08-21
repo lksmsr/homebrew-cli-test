@@ -2,7 +2,7 @@
 cask "sliplane-cli" do
   desc ""
   homepage ""
-  version "0.0.0"
+  version "0.0.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,29 +12,23 @@ cask "sliplane-cli" do
 
   on_macos do
     on_intel do
-      url "https://github.com/lksmsr/cli-test/releases/download/v0.0.0/cli-test_Darwin_x86_64.tar.gz"
-      sha256 "8bba4010d25ca394471e93f9bb1aeb24868572766bee073a791e1616ca117373"
+      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.1/homebrew-cli-test_Darwin_x86_64.tar.gz"
+      sha256 "aba65688b961721744f49b970b36d4486985a8ef7d9afffe64d597b222306d5b"
     end
     on_arm do
-      url "https://github.com/lksmsr/cli-test/releases/download/v0.0.0/cli-test_Darwin_arm64.tar.gz"
-      sha256 "399cf1067efaa565f043978931e9cc543c91c3ba14e202429bfce7d8ec994728"
+      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.1/homebrew-cli-test_Darwin_arm64.tar.gz"
+      sha256 "6db14e3053250d8e08a5a1c87b374cd4fc2e5abda921efd933a2e59537674033"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/lksmsr/cli-test/releases/download/v0.0.0/cli-test_Linux_x86_64.tar.gz"
-      sha256 "dd0da6b4f54c1234bc95c980fc026b2c7e1cd1290ad377597ded90552b09c055"
+      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.1/homebrew-cli-test_Linux_x86_64.tar.gz"
+      sha256 "2270d2b02b29436b511e9e715be592d512105f9d52ef62e18957fd7caa728202"
     end
     on_arm do
-      url "https://github.com/lksmsr/cli-test/releases/download/v0.0.0/cli-test_Linux_arm64.tar.gz"
-      sha256 "8855126583605c39ca7fd2ac68536594e175d5a2cddd73b7881e90d8049e0541"
-    end
-  end
-
-  postflight do
-    if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/sliplane-cli"]
+      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.1/homebrew-cli-test_Linux_arm64.tar.gz"
+      sha256 "b6ec638ce4e3a1416b86c76ec999fecba865754e6ac0a972d0dbf61b0bc80d4b"
     end
   end
 
