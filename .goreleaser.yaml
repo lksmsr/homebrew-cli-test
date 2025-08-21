@@ -50,13 +50,13 @@ homebrew_casks:
     repository:
       owner: lksmsr
       name: cli-test
-    hooks:
-      post:
-        # replace foo with the actual binary name
-        install: |
-          if OS.mac?
-            system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/sliplane-cli"]
-          end
+    # hooks:
+    #   post:
+    #     # replace foo with the actual binary name
+    #     install: |
+    #       if OS.mac?
+    #         system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/sliplane-cli"]
+    #       end
 
 release:
   footer: >-
