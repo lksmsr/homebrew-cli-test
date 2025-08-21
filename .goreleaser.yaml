@@ -55,7 +55,7 @@ homebrew_casks:
         # replace foo with the actual binary name
         install: |
           if OS.mac?
-            system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/sliplane-cli"]
+            system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/homebrew-cli-test"]
           end
 
 release:
