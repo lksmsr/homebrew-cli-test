@@ -2,7 +2,7 @@
 cask "sliplane" do
   desc ""
   homepage ""
-  version "0.0.8"
+  version "0.0.9"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,29 +12,29 @@ cask "sliplane" do
 
   on_macos do
     on_intel do
-      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.8/sliplane-cli_Darwin_x86_64.tar.gz"
-      sha256 "ad0f743ae8236b77afb81be435823adb6946a0b8c3b5bc5074f9a28fb88ef7ed"
+      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.9/sliplane_Darwin_x86_64.tar.gz"
+      sha256 "f4a07ee9169a45a9bf45b5ad869ed82be65e543e923e435d677dd863735042a0"
     end
     on_arm do
-      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.8/sliplane-cli_Darwin_arm64.tar.gz"
-      sha256 "e4a3fa4f1e346cf66d1e2b6b9bc85e7a2591c467f66dae8912baaf3fb14f5e28"
+      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.9/sliplane_Darwin_arm64.tar.gz"
+      sha256 "93860847db7e31fc4db9bccc76415e5595e931c95ed662a274281d967cf0099d"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.8/sliplane-cli_Linux_x86_64.tar.gz"
-      sha256 "3cb76f6b2a39e608ec13b4fbec0149ab44a36cb7f0c2e938df759846c238c287"
+      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.9/sliplane_Linux_x86_64.tar.gz"
+      sha256 "075b8e28f1331b418778ee4054e7471e9a7bf268df2e6fdffbf2b00c031e3c77"
     end
     on_arm do
-      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.8/sliplane-cli_Linux_arm64.tar.gz"
-      sha256 "d3ec76b83ac07ebce8713a8c2cbe87123bad38783569053eaa3077a7f52950f5"
+      url "https://github.com/lksmsr/homebrew-cli-test/releases/download/v0.0.9/sliplane_Linux_arm64.tar.gz"
+      sha256 "bf398b92207e4c3c6d913c70e0a7ead463e82740f1f675f7367b7eb63c799b5b"
     end
   end
 
   postflight do
     if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/homebrew-cli-test"]
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/sliplane"]
     end
   end
 
