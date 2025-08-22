@@ -53,3 +53,17 @@ Run goreleaser
 ```bash
 goreleaser --clean
 ```
+
+
+## Cobra CLI
+
+
+https://github.com/spf13/cobra-cli/blob/main/README.md
+
+```
+cobra cli
+```
+Add to path:
+```
+export PATH=$PATH:$HOME/go/bin
+```
